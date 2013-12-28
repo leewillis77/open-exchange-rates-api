@@ -2,11 +2,11 @@
 
 namespace OpenExchangeRates;
 
-use OpenExchangeRates\Request\RateListRequest;
+use OpenExchangeRates\Request\CurrenciesRequest;
 
 require('tests/bootstrap.php');
 
-class RateListTest extends \PHPUnit_Framework_TestCase
+class CurrenciesRequestTest extends \PHPUnit_Framework_TestCase
 {
     private $config;
     private $request;
@@ -18,7 +18,7 @@ class RateListTest extends \PHPUnit_Framework_TestCase
 
     public function setUp()
     {
-        $this->request = new RateListRequest($this->config);
+        $this->request = new CurrenciesRequest($this->config);
     }
 
     public function tearDown()
@@ -26,7 +26,7 @@ class RateListTest extends \PHPUnit_Framework_TestCase
         unset($this->request);
     }
 
-    public function testRateListRequest()
+    public function testCurrenciesRequest()
     {
         try {
             $response = $this->request->get();
@@ -34,6 +34,6 @@ class RateListTest extends \PHPUnit_Framework_TestCase
             $this->fail('Request exception received');
         }
         $this->assertNotEmpty($response);
-        $this->assertInstanceOf('OpenExchangeRates\Entity\RateList', $response);
+        $this->assertInstanceOf('OpenExchangeRates\Collection\CurrencyCollection', $response);
     }
 }

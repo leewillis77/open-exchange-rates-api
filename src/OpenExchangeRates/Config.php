@@ -9,6 +9,7 @@ class Config
     protected $config = array(
         'app_id' => '',
         'use_ssl' => false,
+        'cache_dir' => 'cache',
     );
 
     public function __construct($config_file)

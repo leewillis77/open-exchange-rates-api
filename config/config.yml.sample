@@ -6,3 +6,4 @@
 #
 app_id: Your app ID from openexchangerates.org
 use_ssl: true or false (default)
+cache_dir: The filesystem directory to use for caching
