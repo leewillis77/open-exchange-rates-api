@@ -1,4 +1,4 @@
-PHP Dotmailer v2 API
+PHP OpenExchangeRates API wrapper
 
 Copyright (C) 2013 Lee Willis
 
