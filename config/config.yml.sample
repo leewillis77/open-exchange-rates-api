@@ -1,0 +1,8 @@
+# Copy this file as config/config.yml and use it
+# to instantiate your request classes, e.g.
+#
+# $config = new OpenExchangeRates\Config( 'config/config.yml' );
+# $request = new OpenExchangeRates\Request\RateListRequest( $config );
+#
+app_id: Your app ID from openexchangerates.org
+use_ssl: true or false (default)
