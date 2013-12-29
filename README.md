@@ -12,7 +12,12 @@ A PHP wrapper around the [Open Exchange Rates](openexchangerates.org) API.
 * Docblocks are missing in many places - patches welcome
 * PHPUnit is set up, and some test cases are present. More would be welcome.
 * Requires PHP 5.3 or above.
-* API responses are cached in the cache/ subfolder - disallow access to this in your web server config
+* API responses are cached in the cache/ subfolder - <strong>disallow access to this in your web server config</strong>.
 
 # Examples
 See the examples folder for a simple example of how to use the API wrapper. This is designed to get you going, and is not a complete reference.
+
+# Disclaimer
+This API is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall the the developer(s) be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.
+
+Although every attempt is made to ensure quality, NO guarantees are given whatsoever of accuracy, validity, availability, or fitness for any purpose - please use at your own risk. 
