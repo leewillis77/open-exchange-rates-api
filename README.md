@@ -15,7 +15,24 @@ A PHP wrapper around the [Open Exchange Rates](openexchangerates.org) API.
 * API responses are cached in the cache/ subfolder - <strong>disallow access to this in your web server config</strong>.
 
 # Examples
-See the examples folder for a simple example of how to use the API wrapper. This is designed to get you going, and is not a complete reference.
+See the examples folder for a simple example of how to use the API wrapper. This is designed to get you going, and is not a complete reference, or see the code sample below:
+
+```php
+use OpenExchangeRates\Config;
+use OpenExchangeRates\Request\ConversionRequest;
+
+require('vendor/autoload.php');
+
+$config = new Config('config/config.yml');
+$request = new ConversionRequest($config);
+
+try {
+    $response = $request->convert(100, 'USD', 'GBP');
+} catch (\Exception $e) {
+    die('Request exception received: '.$e->getMessage());
+}
+echo "100USD is " . $response . "GBP\n";
+```
 
 # Disclaimer
 This API is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose and noninfringement. In no event shall the the developer(s) be liable for any claim, damages or other liability, whether in an action of contract, tort or otherwise, arising from, out of or in connection with the software or the use or other dealings in the software.
