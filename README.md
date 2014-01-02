@@ -31,7 +31,7 @@ try {
 } catch (\Exception $e) {
     die('Request exception received: '.$e->getMessage());
 }
-echo "100USD is " . $response . "GBP\n";
+echo "100 USD is " . $response . " GBP\n";
 ```
 
 # Disclaimer
