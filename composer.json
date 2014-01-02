@@ -1,5 +1,5 @@
 {
-    "name": "leewillis77/openexchangerates-api",
+    "name": "leewillis77/open-exchange-rates-api",
     "description": "A PHP wrapper for the 'open exchange rates' API.",
     "type": "library",
     "keywords": [
@@ -7,7 +7,7 @@
         "currency",
         "api"
     ],
-    "homepage": "https://github.com/leewillis77/openexchangerates-api",
+    "homepage": "https://github.com/leewillis77/open-exchange-rates-api",
     "license": "GPL-2.0",
     "authors": [
         {
@@ -16,7 +16,7 @@
         }
     ],
     "support": {
-        "issues": "https://github.com/leewillis77/openexchangerates-api/issues"
+        "issues": "https://github.com/leewillis77/open-exchange-rates-api/issues"
     },
     "require": {
         "php": ">=5.3.0",
