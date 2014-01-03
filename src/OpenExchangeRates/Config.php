@@ -12,8 +12,12 @@ class Config
         'cache_dir' => 'cache',
     );
 
-    public function __construct($config_file)
+    public function __construct($params)
     {
+        $this->load($params);
+    }
+    
+    public function load($config_file) {
         $parser = new Parser();
         $this->config = $parser->parse(file_get_contents($config_file));
     }
