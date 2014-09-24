@@ -36,4 +36,23 @@ class ConversionRequestTest extends \PHPUnit_Framework_TestCase
             $this->fail('Request exception received: '.$e->getMessage());
         }
     }
+
+    public function testLowerCaseConversionRequest()
+    {
+    	try {
+    	    $response = $this->request->convert(100, 'USD', 'gbp');
+    	} catch (\Exception $e) {
+    	    $this->fail('Request exception received: '.$e->getMessage());
+    	}
+    	try {
+    	    $response = $this->request->convert(100, 'gbp', 'USD');
+    	} catch (\Exception $e) {
+    	    $this->fail('Request exception received: '.$e->getMessage());
+    	}
+    	try {
+    	    $response = $this->request->convert(100, 'eur', 'gbp');
+    	} catch (\Exception $e) {
+    	    $this->fail('Request exception received: '.$e->getMessage());
+    	}
+    }
 }

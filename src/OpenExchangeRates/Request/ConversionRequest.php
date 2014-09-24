@@ -34,8 +34,10 @@ class ConversionRequest
         if (empty($from) || empty($to)) {
             throw new Exception('Invalid currency requested');
         }
-        $rate_list_request = new RateListRequest($this->config);
-        $rate_list = $rate_list_request->get();
+		$from              = strtoupper($from);
+		$to                = strtoupper($to);
+		$rate_list_request = new RateListRequest($this->config);
+		$rate_list         = $rate_list_request->get();
 
         if (!isset($rate_list->rates->$from) ||
             !isset($rate_list->rates->$to)) {
