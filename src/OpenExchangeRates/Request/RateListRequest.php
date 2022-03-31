@@ -17,7 +17,6 @@ class RateListRequest
     public function __construct(Config $config)
     {
         $this->request = new Request($config);
-        $this->request->setEndpoint('latest.json');
     }
 
     /**
@@ -27,8 +26,7 @@ class RateListRequest
      */
     public function get($args = array())
     {
-        $this->request->setArgs($args);
-        $response = $this->request->send('get', '');
+        $response = $this->request->get('latest.json');
         if ($response) {
             return new RateList($response);
         } else {

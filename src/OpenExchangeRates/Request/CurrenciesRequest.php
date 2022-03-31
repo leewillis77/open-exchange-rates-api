@@ -17,7 +17,6 @@ class CurrenciesRequest
     public function __construct(Config $config)
     {
         $this->request = new Request($config);
-        $this->request->setEndpoint('currencies.json');
     }
 
     /**
@@ -27,8 +26,7 @@ class CurrenciesRequest
      */
     public function get($args = array())
     {
-        $this->request->setArgs($args);
-        $response = $this->request->send('get', '');
+        $response = $this->request->get('currencies.json', $args);
         if ($response) {
             return new CurrencyCollection($response);
         } else {

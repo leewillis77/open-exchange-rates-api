@@ -9,3 +9,5 @@ vendor/
 
 # Ignore cache files
 cache/
+.idea
+.phpunit.result.cache

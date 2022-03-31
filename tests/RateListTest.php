@@ -3,25 +3,22 @@
 namespace OpenExchangeRates;
 
 use OpenExchangeRates\Request\RateListRequest;
+use PHPUnit\Framework\TestCase;
 
 require('tests/bootstrap.php');
 
-class RateListTest extends \PHPUnit_Framework_TestCase
+class RateListTest extends TestCase
 {
     private $config;
     private $request;
 
-    public function __construct()
+    public function setUp(): void
     {
         $this->config = new Config('config/config.yml');
-    }
-
-    public function setUp()
-    {
         $this->request = new RateListRequest($this->config);
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         unset($this->request);
     }

@@ -3,25 +3,23 @@
 namespace OpenExchangeRates;
 
 use OpenExchangeRates\Request\CurrenciesRequest;
+use PHPUnit\Framework\TestCase;
+
 
 require('tests/bootstrap.php');
 
-class CurrenciesRequestTest extends \PHPUnit_Framework_TestCase
+class CurrenciesRequestTest extends TestCase
 {
     private $config;
     private $request;
 
-    public function __construct()
+    public function setUp(): void
     {
         $this->config = new Config('config/config.yml');
-    }
-
-    public function setUp()
-    {
         $this->request = new CurrenciesRequest($this->config);
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         unset($this->request);
     }
